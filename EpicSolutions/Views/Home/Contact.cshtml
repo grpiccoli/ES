@@ -1,0 +1,95 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "Epic Solutions";
+    ViewData["titulo"] = "<strong>Contáctanos</strong>";
+    ViewData["subtitulo"] = "Atendemos tus necesidades.";
+}
+
+<div class="gtco-section gtco-gray-bg">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6" data-aos="fade-up">
+                    <h3>Envíanos tu consulta</h3>
+                    @*<form asp-action="Contact" method="post">
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label asp-for="Name" class="sr-only"></label>
+                                <input asp-for="Name" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label asp-for="Email" class="sr-only"></label>
+                                <input asp-for="Email" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label asp-for="Subject" class="sr-only"></label>
+                                <input asp-for="Subject" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label asp-for="Message" class="sr-only"></label>
+                                <textarea asp-for="Message" cols="30" rows="10" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Enviar" class="btn btn-primary">
+                        </div>
+                    </form>*@
+                </div>
+                <div class="col-md-5 col-md-push-1" data-aos="fade-up">
+
+                    <div class="gtco-contact-info">
+                        <h3>Información de Contacto</h3>
+                        <ul>
+                            <li class="razon social">
+                                Empresas Piccoli Limitada <br> RUT: 76.473.272-3 <br> Epic Solutions
+                            </li>
+                            <li class="phone">
+                                <a href="tel:+56952550410">
+                                    <span style="color:lightgray;font-size:large;margin-right:20px;">
+                                        <icon class="fas fa-phone"></icon>
+                                    </span>
+                                    + 56 9 5255 0410
+                                </a>
+                            </li>
+                            <li class="email">
+                                <a href="mailto:contacto@epicsolutions.cl">
+                                    <span style="color:lightgray;font-size:large;margin-right:20px;">
+                                        <icon class="fas fa-envelope"></icon>
+                                    </span>
+                                    contacto@epicsolutions.cl
+                                </a>
+                            </li>
+                            <li class="url">
+                                <a href="//https:www.epicsolutions.cl">
+                                    <span style="color:lightgray;font-size:large;margin-right:20px;">
+                                        <icon class="fas fa-globe-americas"></icon>
+                                    </span>
+                                    epicsolutions.cl
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<partial name="_ValidationScriptsPartial" />
+
+@this.Block(@<script>
+    @if (Model != null){
+        @:$("form")[0].scrollIntoView({behavior: "smooth", block: "start" });
+        if(Model.IsValid) {
+            @:alert("Correo enviado!");
+        }
+    }
+    </script>, "Scripts")*@

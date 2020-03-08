@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@ViewData["Title"] - EpicSolutions</title>
+    <meta name="author" content="Antonela Prieto" />
+    <open-graph-website site-name="Epic Solutions"
+                        title=@ViewData["Title"]
+                        main-image="@(new OpenGraphImage(
+        new Uri($"{Context.Request.Scheme}://{Context.Request.Host}/android-chrome-512x512.png"),
+        "image/png",
+        1200,
+        630))"
+                        determiner="@OpenGraphDeterminer.Blank" />
+    <script type="application/ld+json">
+        @{
+            var website = new WebSite()
+            {
+                AlternateName = "Epic Solutions",
+                Name = (string)ViewData["Title"],
+                Url = new Uri($"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.Path}{Context.Request.QueryString}")
+            };
+            var jsonLd = website.ToString();
+        }
+        @Html.Raw(jsonLd)
+    </script>
+    @Html.Raw(new TwitterCardSummaryLargeImage
+{
+    Title = "Epic Solutions",
+    Description = "Soluciones tecnológicas para empresas",
+    CreatorUsername = "@anelis_1016",
+    SiteUsername = "@anelis_1016"
+})
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46146363-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-46146363-7');
+    </script>
+    <partial name="_Favicons" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <partial name="_Libs" model='(new HashSet<string>
+             {
+    "jquery", "aos", "bootstrap", "@fortawesome/fontawesome-free",
+    "jquery-countto","jquery.easing", "main",
+    "stellar.js", "waypoints",
+    "style"
+             }, "TOP")' />
+    @this.WriteBlocks("TOPStyles")
+    @this.WriteBlocks("Styles")
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v5.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="605999509841044"
+         theme_color="#67b868"
+         logged_in_greeting="Hello! ¡Hola!"
+         logged_out_greeting="Hello! ¡Hola!">
+    </div>
+    <div class="gtco-loader"></div>
+    <div id="page">
+        <div class="page-inner">
+            <div id="head-top" style="position: absolute; width: 100%; top: 0; ">
+                <div class="gtco-top">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-6 col-md-6">
+                                <div id="gtco-logo"><a asp-area="" asp-controller="Home" asp-action="Index"><img class="" src="~/images/epic_light_hor.svg" style="width:150px" /></a></div>
+                            </div>
+                            <div class="col-xs-6 col-md-6 social-icons">
+                                <ul class="gtco-social-top">
+                                    <li><a href="https://www.facebook.com/epicsolutions.cl/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/epicsolutionscl/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="gtco-nav sticky-banner" role="navigation">
+                    <div class="gtco-container">
+                        <div class="row justify-content-md-center">
+                            <div class="col-xs-12 text-center menu-1">
+                                <ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Services">Servicios</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Portafolio">Portafolio</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Partners">Alianzas</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contacto</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <header id="gtco-header" class="gtco-cover gtco-cover-md" role="banner" style="background-image: url(/images/portada.1350.jpg)" data-stellar-background-ratio="0.5">
+                <div class="overlay"></div>
+                <div class="gtco-container">
+                    <div class="row" style="margin-top:3em;">
+                        <div class="col-md-12 mt-text text-center" data-aos="fade-up">
+                            <img src="~/images/epic_lighter.svg" style="width:200px;" />
+                            <h1>@Html.Raw(ViewData["titulo"])</h1>
+                            <h2>@ViewData["subtitulo"]</h2>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                @RenderBody()
+            </main>
+            <footer id="gtco-footer" role="contentinfo">
+                <div class="gtco-container">
+                    <div class="row row-p	b-md">
+                        <div class="col-md-4">
+                            <div class="gtco-widget">
+                                <h3>Sobre Nosotros</h3>
+                                <p>Somos una empresa dedicada al rubro de la informática y marketing digital. Ofrecemos servicios a la medida de tus necesidades para llevar tu empresa al siguiente nivel.</p>
+                                <p><a asp-area="" asp-controller="Home" asp-action="About">Conocer más...</a></p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-push-1">
+                            <div class="gtco-widget">
+                                <h3><a asp-area="" asp-controller="Home" asp-action="Services">Servicios</a></h3>
+                                <ul class="gtco-footer-links">
+                                    <li>SEO y Posicionamiento web</li>
+                                    <li>Desarrollo Web</li>
+                                    <li>Base de datos</li>
+                                    <li>Integración de plataformas</li>
+                                    <li>Desarrollo de API´s</</li>
+                                    <li>Marketing Digital</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-md-push-1">
+                            <div class="gtco-widget">
+                                <h3>Contáctanos</h3>
+                                <ul class="gtco-quick-contact">
+                                    <li><a href="tel:+56952550410"><i class="fas fa-phone"></i> +56 9 5255 0410</a></li>
+                                    <li><a href="mailto:contacto@epicsolutions.cl"><i class="fas fa-envelope"></i> contacto@epicsolutions.cl</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row copyright">
+                        <div class="col-md-12">
+                            <p class="float-left">
+                                <small class="block">&copy; 2019 Empresas Piccoli Limitada. All Rights Reserved.</small>
+                                <small class="block"><img class="" src="~/images/epic_light_hor.svg" style="width:150px" /></small>
+                            </p>
+                            <p class="float-right">
+                                <ul class="gtco-social-icons float-right">
+                                    <li><a href="https://www.facebook.com/epicsolutions.cl/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/epicsolutionscl/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    @this.WriteBlocks("TOPScripts")
+    @this.WriteBlocks("Scripts")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
