@@ -202,7 +202,8 @@
     var counter = function () {
         $('.js-counter').countTo({
             formatter: function (value, options) {
-                return value.toFixed(options.decimals);
+                value = value.toFixed(options.decimals);
+                return value.replace(/\B(?=(\d{3})+(?!\d))/g, $('#sep').val());
             }
         });
     };

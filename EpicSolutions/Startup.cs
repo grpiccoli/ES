@@ -17,6 +17,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System.IO;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace EpicSolutions
 {
@@ -24,20 +25,28 @@ namespace EpicSolutions
     {
         private readonly string _os = Environment.OSVersion.Platform.ToString();
         //private readonly string _corsOrigins = "_safeOrigins";
+        private const string defaultCulture = "en";
+        private readonly CultureInfo[] supportedCultures;
         public Startup(IConfiguration configuration)
         {
+            supportedCultures = new[]
+                {
+                    new CultureInfo(defaultCulture),
+                    new CultureInfo("es")
+                };
             Configuration = configuration;
         }
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public static void ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Latest)
-                .AddViewLocalization()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization()
                 .AddNewtonsoftJson();
 
             services.AddCors();
@@ -56,28 +65,19 @@ namespace EpicSolutions
                 //options.ExcludedHosts.Add("https://www.facebook.com");
             });
 
-            //services.AddHttpsRedirection(options =>
-            //    options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect);
+            services.AddHttpsRedirection(options =>
+                options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect);
+
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                options.DefaultRequestCulture = new RequestCulture(defaultCulture);
+                // Formatting numbers, dates, etc.
+                options.SupportedCultures = supportedCultures;
+                // UI strings that we have localized.
+                options.SupportedUICultures = supportedCultures;
+            });
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-
-            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("es-CL");
-            services.Configure<RequestLocalizationOptions>(
-                opts =>
-                {
-                    var supportedCultures = new List<CultureInfo>
-                    {
-                                    new CultureInfo("es-CL"),
-                                    new CultureInfo("es"),
-                                    new CultureInfo("en")
-                    };
-
-                    opts.DefaultRequestCulture = new RequestCulture("es-CL");
-                    // Formatting numbers, dates, etc.
-                    opts.SupportedCultures = new List<CultureInfo> { new CultureInfo("es-CL") };
-                    // UI strings that we have localized.
-                    opts.SupportedUICultures = supportedCultures;
-                });
 
             services.AddUrlHelper();
 
@@ -118,7 +118,7 @@ namespace EpicSolutions
                 SupportedUICultures = supportedCultures
             });
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             FileExtensionContentTypeProvider provider = new FileExtensionContentTypeProvider();
             provider.Mappings[".webmanifest"] = "application/manifest+json";
             app.UseStaticFiles(new StaticFileOptions()
@@ -131,8 +131,7 @@ namespace EpicSolutions
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
 
-            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
-            app.UseRequestLocalization(options.Value);
+            app.UseRequestLocalization(app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value);
 
             app.UseEndpoints(endpoints =>
             {

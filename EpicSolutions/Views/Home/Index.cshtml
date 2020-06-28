@@ -1,33 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Epic Solutions";
-    ViewData["titulo"] = "Tu empresa<strong> al siguiente nivel</strong>";
-    ViewData["subtitulo"] = "Soluciones tecnológicas a tu medida.";
+    ViewData["titulo"] = Localizer["Taking your company <strong>to the next level</strong>"].Value;
+    ViewData["subtitulo"] = Localizer["Tailored technological solutions."].Value;
 }
+
+<input style="display:none" id="sep" value="@Localizer[","]"/>
 
 <div class="flex-section gtco-gray-bg">
     <div class="gtco-col-1">
         <div class="text">
             <div class="row row-pb-sm">
                 <div class="col-md-12">
-                    <h2>Equipo Multidisciplinario</h2>
-
-                    <p>Nuestro equipo de trabajo integral es la base para la disposición y capacidad creativa.</p>
-                    <p>Nos mantenemos en constante actualización de conocimientos sobre los avances mundiales en lenguajes de programación, estrategias de posicionamiento web y marketing digital.</p>
+                    <h2>@Localizer["Multidisciplinary team"]</h2>
+                    <p>@Localizer["Our multidisciplinary team is the foundation of our innovative capabilities"]</p>
+                    <p>@Localizer["We are constantly training to bring you scalable and modular solutions"]</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>Analistas de software</li>
-                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>Desarrolladores de software</li>
-                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>Administración de Empresas</li>
+                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>@Localizer["Software analists"]</li>
+                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>@Localizer["Software developers"]</li>
+                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>@Localizer["Business management"]</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="check-li">
                         <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>Community<br /> Manager</li>
-                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>Evaluación<br /> de proyectos</li>
-                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>BioInformática</li>
+                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>@Localizer["Project<br /> Evaluation"]</li>
+                        <li><span style="color:#66D37E;margin-right:10px;"><i class="fas fa-check"></i></span>@Localizer["Bioinformatics"]</li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +42,7 @@
     <div class="gtco-container text-center">
         <div class="display-t">
             <div class="display-tc">
-                <h1 data-aos="fade-up">Aprendizaje continuo de los avances en IT</h1>
+                <h1 data-aos="fade-up">@Localizer["Continuous development and training"]</h1>
             </div>
         </div>
     </div>
@@ -51,25 +52,25 @@
         <div class="text">
             <div class="row row-pb-sm">
                 <div class="col-md-12">
-                    <h2>Nuestros Valores</h2>
-                    <p>Creemos en el desarrollo y avance continuo con responsabilidad y compromiso con nuestro entorno.</p>
-                    <p>Practicamos la colaboración y cooperación con nuestros pares y nuestros clientes con el objetivo de ganar-ganar.</p>
-                    <p>Nuestros pilares son la comunicación, la constante preparación y actualización de conocimientos y la transparencia con nuestros socios y clientes.</p>
+                    <h2>@Localizer["Our Mision"]</h2>
+                    <p>@Localizer["Commiting to the sustainable improvement of our clients through continuous development"]</p>
+                    <p>@Localizer["Through collaboration with our partners and clients aiming to bring long term quality solutions tailored to their needs"]</p>
+                    <p>@Localizer["Our pillars are communication, constant training and transparency"]</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Responsabilidad</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Calidad de Servicio</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Compromiso</li>
+                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>@Localizer["Sustainability"]</li>
+                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>@Localizer["Quality of Service"]</li>
+                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>@Localizer["Continuity"]</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Cooperación</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Desarrollo</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Comunicación efectiva</li>
+                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>@Localizer["Cooperation"]</li>
+                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>@Localizer["Development"]</li>
+                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>@Localizer["Communication"]</li>
                     </ul>
                 </div>
             </div>
@@ -83,7 +84,7 @@
     <div class="gtco-container text-center">
         <div class="display-t">
             <div class="display-tc">
-                <h1 data-aos="fade-up">Calidad sobre Cantidad</h1>
+                <h1 data-aos="fade-up">@Localizer["Quality over quantity"]</h1>
             </div>
         </div>
     </div>
@@ -94,126 +95,130 @@
         <div class="gtco-container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                    <h2>Servicios</h2>
-                    <p>Ofrecemos llevar a tu empresa al siguiente nivel. <br />Soluciones ajustadas a tus necesidades de crecimiento.</p>
-                </div>
+                    <h2>@Localizer["Services"]</h2>
+                    <p>
+                        @Localizer["Taking your company <strong>to the next level</strong>"]
+                    <br />
+                    @Localizer["Tailored technological solutions."]
+                </p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="#" class="gtco-card-item">
-                        <figure>
-                            <div class="overlay"></div>
-                            <img src="~/images/seo.670.jpg" alt="Image" class="img-fluid">
-                        </figure>
-                        <div class="gtco-text">
-                            <h2>SEO y Marketing Digital</h2>
-                            <p>Posicionamiento orgánico de tu sitio web y campañas de marketing digital.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a href="#" class="gtco-card-item">
-                        <figure>
-                            <div class="overlay"></div>
-                            <img src="~/images/webdesign.640.jpg" alt="Image" class="img-fluid">
-                        </figure>
-                        <div class="gtco-text">
-                            <h2>Desarrollo Web</h2>
-                            <p>Diseñamos tu sitio web de acuerdo a tus necesidades y objetivos.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a class="gtco-card-item">
-                        <figure>
-                            <div class="overlay"></div>
-                            <img src="~/images/data.670.jpg" alt="Image" class="img-fluid">
-                        </figure>
-                        <div class="gtco-text">
-                            <h2>Bases de datos</h2>
-                            <p>Diseño de sistemas de almacenamiento, acceso y procesamiento de datos.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a class="gtco-card-item">
-                        <figure>
-                            <div class="overlay"></div>
-                            <img src="~/images/desk2.750.jpg" alt="Image" class="img-fluid">
-                        </figure>
-                        <div class="gtco-text">
-                            <h2>Integración de plataformas</h2>
-                            <p>Diseño de interfaces gráficas para la integración de diversas fuentes de datos e información en una sola.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a class="gtco-card-item">
-                        <figure>
-                            <div class="overlay"></div>
-                            <img src="~/images/apis2.589.jpg" alt="Image" class="img-fluid">
-                        </figure>
-                        <div class="gtco-text">
-                            <h2>Desarrollo de API´s</h2>
-                            <p>Módulos de integración adaptados al crecimiento y actualización de tu software.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <a class="gtco-card-item">
-                        <figure>
-                            <div class="overlay"></div>
-                            <img src="~/images/analyst.720.jpg" alt="Image" class="img-fluid">
-                        </figure>
-                        <div class="gtco-text">
-                            <h2>Data Analytics</h2>
-                            <p>Análisis estadísticos de datos y desarrollo de sotfware para análisis y procesamiento de datos.</p>
-                        </div>
-                    </a>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a href="#" class="gtco-card-item">
+                    <figure>
+                        <div class="overlay"></div>
+                        <img src="~/images/seo.670.jpg" alt="Image" class="img-fluid">
+                    </figure>
+                    <div class="gtco-text">
+                        <h2>@Localizer["Search Engine Optimization and Digital Presence"]</h2>
+                        <p>@Localizer["Search Engine Optimization and Search Engine Marketing"]</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a href="#" class="gtco-card-item">
+                    <figure>
+                        <div class="overlay"></div>
+                        <img src="~/images/webdesign.640.jpg" alt="Image" class="img-fluid">
+                    </figure>
+                    <div class="gtco-text">
+                        <h2>@Localizer["Web Application Development"]</h2>
+                        <p>@Localizer["We design your website to fit your needs and goals"]</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a class="gtco-card-item">
+                    <figure>
+                        <div class="overlay"></div>
+                        <img src="~/images/data.670.jpg" alt="Image" class="img-fluid">
+                    </figure>
+                    <div class="gtco-text">
+                        <h2>@Localizer["Database"]</h2>
+                        <p>@Localizer["Data warehouse design, data access and data processing"]</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a class="gtco-card-item">
+                    <figure>
+                        <div class="overlay"></div>
+                        <img src="~/images/desk2.750.jpg" alt="Image" class="img-fluid">
+                    </figure>
+                    <div class="gtco-text">
+                        <h2>@Localizer["Platform integration"]</h2>
+                        <p>@Localizer["GUI design for integrating data sources and APIs into one resource"]</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a class="gtco-card-item">
+                    <figure>
+                        <div class="overlay"></div>
+                        <img src="~/images/apis2.589.jpg" alt="Image" class="img-fluid">
+                    </figure>
+                    <div class="gtco-text">
+                        <h2>@Localizer["RESTful API and microservices"]</h2>
+                        <p>@Localizer["Adaptative modular microservices for continuous development"]</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <a class="gtco-card-item">
+                    <figure>
+                        <div class="overlay"></div>
+                        <img src="~/images/analyst.720.jpg" alt="Image" class="img-fluid">
+                    </figure>
+                    <div class="gtco-text">
+                        <h2>Data Analytics</h2>
+                        <p>@Localizer["Statistical analysis and analytical software development for data processing and visualization"]</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+</div>
 
-    <div id="gtco-features">
-        <div class="gtco-container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center gtco-heading" data-aos="fade-up">
-                    <h2>Cómo trabajamos.</h2>
-                    <p>Nos adaptamos a tus tiempos y necesidades, con responsabilidad y compromiso en nuestro servicio de calidad.</p>
+<div id="gtco-features">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center gtco-heading" data-aos="fade-up">
+                <h2>@Localizer["Work ethics"]</h2>
+                <p>@Localizer["We adapt to your needs complying to quality of service standards"]</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-center" data-aos="fade-left">
+                    <span class="icon">
+                        <i>1</i>
+                    </span>
+                    <h3>@Localizer["Project Planning and Evaluation"]</h3>
+                    <p>@Localizer["We listen to our clients and adapt to their needs"]</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-center" data-aos="fade-left">
-                        <span class="icon">
-                            <i>1</i>
-                        </span>
-                        <h3>Planificación</h3>
-                        <p>Escuchamos los requerimientos necesarios para la planificación del trabajo, priorizando lo que es importante para tu empresa.</p>
-                    </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-center" data-aos="fade-left" data-aos-delay="200">
+                    <span class="icon">
+                        <i>2</i>
+                    </span>
+                    <h3>@Localizer["Agile Development"]</h3>
+                    <p>@Localizer["Individuals and interactions over processes and tools. Working software over comprehensive documentation. Customer collaboration over contract negotiation. Responding to change over following a plan."]</p>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-center" data-aos="fade-left" data-aos-delay="200">
-                        <span class="icon">
-                            <i>2</i>
-                        </span>
-                        <h3>Desarrollo Ágil</h3>
-                        <p>Aplicamos metodologías ágiles de trabajo para cubrir todas las áreas y módulos comprometidos de manera eficiente y eficaz.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="feature-center" data-aos="fade-left" data-aos-delay="400">
-                        <span class="icon">
-                            <i>3</i>
-                        </span>
-                        <h3>Retroalimentación</h3>
-                        <p>Comunicación constante con nuestros clientes evaluando continuamente los procesos de planificación, desarrollo e implementación.</p>
-                    </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="feature-center" data-aos="fade-left" data-aos-delay="400">
+                    <span class="icon">
+                        <i>3</i>
+                    </span>
+                    <h3>@Localizer["Feedback"]</h3>
+                    <p>@Localizer["Constant communication with our clients and continuous evaluation, process planning, development and implementation"]</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <div class="gtco-cover gtco-cover-sm" style="background-image: url(/images/empresa.1350.jpg)" data-stellar-background-ratio="0.5">
@@ -221,45 +226,45 @@
     <div class="gtco-container text-center">
         <div class="display-t">
             <div class="display-tc">
-                <h1>Creamos lo que tu empresa necesita para seguir creciendo!</h1>
+                <h1>@Localizer["We create what your company needs to keep growing!"]</h1>
             </div>
         </div>
     </div>
 </div>
+@{var anos = DateTime.Now.Year - 2015;}
 <div id="gtco-counter" class="gtco-section">
     <div class="gtco-container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                <h2>Hechos</h2>
-                <p>4 Años de experiencia en programación, desarrollo de proyectos públicos, posicionamiento web, diseño de bases de datos y programas estadísticos.</p>
+                <h2>@Localizer["Facts"]</h2>
+                <p>@anos @Localizer["Years of experience in IT development, public project management, SEO, SEM, database, data analysis"]</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3 col-sm-6" data-aos="fade-up">
                 <div class="feature-center">
-                    <span class="counter js-counter" data-from="0" data-to="4" data-refresh-interval="50">1</span>
-                    <span class="counter-label">Años de Experiencia</span>
+                    <span class="counter js-counter" data-from="0" data-to="@anos" data-refresh-interval="50">1</span>
+                    <span class="counter-label">@Localizer["Years of experience"]</span>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6" data-aos="fade-up">
                 <div class="feature-center">
-                    <span class="counter js-counter" data-from="0" data-to="15" data-speed="2000" data-refresh-interval="50">1</span>
-                    <span class="counter-label">Clientes</span>
+                    <span class="counter js-counter" data-from="0" data-to="12" data-speed="2000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">@Localizer["Clients"]</span>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6" data-aos="fade-up">
                 <div class="feature-center">
-                    <span class="counter js-counter" data-from="0" data-to="15" data-speed="2000" data-refresh-interval="50">1</span>
-                    <span class="counter-label">Proyectos</span>
+                    <span class="counter js-counter" data-from="0" data-to="20" data-speed="2000" data-refresh-interval="50">1</span>
+                    <span class="counter-label">@Localizer["Projects"]</span>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6" data-aos="fade-up">
                 <div class="feature-center">
-                    <span class="counter js-counter" data-from="0" data-to="2276826" data-speed="3000" data-refresh-interval="50">2276000</span>
-                    <span class="counter-label">Líneas de códigos</span>
+                    <span class="counter js-counter" data-from="0" data-to="794807175" data-speed="3000" data-refresh-interval="50">794807175</span>
+                    <span class="counter-label">@Localizer["Lines of code"]</span>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

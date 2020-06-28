@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="," xml:space="preserve">
+    <value>.</value>
+  </data>
+  <data name="Adaptative modular microservices for continuous development" xml:space="preserve">
+    <value>Módulos de integración adaptados al crecimiento y actualización de tu software.</value>
+  </data>
+  <data name="Agile Development" xml:space="preserve">
+    <value>Desarrollo Ágil</value>
+  </data>
+  <data name="Bioinformatics" xml:space="preserve">
+    <value>BioInformática</value>
+  </data>
+  <data name="Business management" xml:space="preserve">
+    <value>Administración de Empresas</value>
+  </data>
+  <data name="Clients" xml:space="preserve">
+    <value>Clientes</value>
+  </data>
+  <data name="Commiting to the sustainable improvement of our clients through continuous development" xml:space="preserve">
+    <value>Creemos en el desarrollo y avance continuo con responsabilidad y compromiso con nuestro entorno.</value>
+  </data>
+  <data name="Communication" xml:space="preserve">
+    <value>Comunicación efectiva</value>
+  </data>
+  <data name="Constant communication with our clients and continuous evaluation, process planning, development and implementation" xml:space="preserve">
+    <value>Comunicación constante con nuestros clientes evaluando continuamente los procesos de planificación, desarrollo e implementación.</value>
+  </data>
+  <data name="Continuity" xml:space="preserve">
+    <value>Compromiso</value>
+  </data>
+  <data name="Continuous development and training" xml:space="preserve">
+    <value>Aprendizaje continuo de los avances en IT</value>
+  </data>
+  <data name="Cooperation" xml:space="preserve">
+    <value>Cooperación</value>
+  </data>
+  <data name="Data warehouse design, data access and data processing" xml:space="preserve">
+    <value>Diseño de sistemas de almacenamiento, acceso y procesamiento de datos.</value>
+  </data>
+  <data name="Databases" xml:space="preserve">
+    <value>Base de datos</value>
+  </data>
+  <data name="Development" xml:space="preserve">
+    <value>Desarrollo</value>
+  </data>
+  <data name="Facts" xml:space="preserve">
+    <value>Hechos</value>
+  </data>
+  <data name="Feedback" xml:space="preserve">
+    <value>Retroalimentación</value>
+  </data>
+  <data name="GUI design for integrating data sources and APIs into one resource" xml:space="preserve">
+    <value>Diseño de interfaces gráficas para la integración de diversas fuentes de datos e información en una sola.</value>
+  </data>
+  <data name="Individuals and interactions over processes and tools. Working software over comprehensive documentation. Customer collaboration over contract negotiation. Responding to change over following a plan." xml:space="preserve">
+    <value>Aplicamos metodologías ágiles de trabajo para cubrir todas las áreas y módulos comprometidos de manera eficiente y eficaz.</value>
+  </data>
+  <data name="Lines of code" xml:space="preserve">
+    <value>Líneas de código</value>
+  </data>
+  <data name="Multidisciplinary team" xml:space="preserve">
+    <value>Equipo Multidisciplinario</value>
+  </data>
+  <data name="Our Mision" xml:space="preserve">
+    <value>Nuestros Valores</value>
+  </data>
+  <data name="Our multidisciplinary team is the foundation of our innovative capabilities" xml:space="preserve">
+    <value>Nuestro equipo de trabajo integral es la base para la disposición y capacidad creativa.</value>
+  </data>
+  <data name="Our pillars are communication, constant training and transparency" xml:space="preserve">
+    <value>Nuestros pilares son la comunicación, la constante preparación y actualización de conocimientos y la transparencia con nuestros socios y clientes.</value>
+  </data>
+  <data name="Platform integration" xml:space="preserve">
+    <value>Integración de plataformas</value>
+  </data>
+  <data name="Project Planning and Evaluation" xml:space="preserve">
+    <value>Planificación</value>
+  </data>
+  <data name="Project&lt;br /&gt; Evaluation" xml:space="preserve">
+    <value>Evaluación&lt;br /&gt; de proyectos</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Proyectos</value>
+  </data>
+  <data name="Quality of Service" xml:space="preserve">
+    <value>Calidad de Servicio</value>
+  </data>
+  <data name="Quality over Quantity" xml:space="preserve">
+    <value>Calidad sobre Cantidad</value>
+  </data>
+  <data name="RESTful API and microservices" xml:space="preserve">
+    <value>Desarrollo de APIs y microservicios</value>
+  </data>
+  <data name="Search Engine Marketing and microsegmentation" xml:space="preserve">
+    <value>Marketing Digital y microsegmentación</value>
+  </data>
+  <data name="Search Engine Optimization and Digital Presence" xml:space="preserve">
+    <value>Optimización de búscadores (SEO) y Posicionamiento web</value>
+  </data>
+  <data name="Search Engine Optimization and Search Engine Marketing" xml:space="preserve">
+    <value>Posicionamiento orgánico de tu sitio web y campañas de marketing digital.</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Servicios</value>
+  </data>
+  <data name="Software analists" xml:space="preserve">
+    <value>Analistas de software</value>
+  </data>
+  <data name="Software developers" xml:space="preserve">
+    <value>Desarrolladores de software</value>
+  </data>
+  <data name="Statistical analysis and analytical software development for data processing and visualization" xml:space="preserve">
+    <value>Análisis estadísticos de datos y desarrollo de sotfware para análisis y procesamiento de datos.</value>
+  </data>
+  <data name="Sustainability" xml:space="preserve">
+    <value>Responsabilidad</value>
+  </data>
+  <data name="Tailored technological solutions." xml:space="preserve">
+    <value>Soluciones tecnológicas a tu medida.</value>
+  </data>
+  <data name="Taking your company &lt;strong&gt;to the next level&lt;/strong&gt;" xml:space="preserve">
+    <value>Tu empresa &lt;strong&gt;al siguiente nivel&lt;/strong&gt;</value>
+  </data>
+  <data name="Through collaboration with our partners and clients aiming to bring long term quality solutions tailored to their needs" xml:space="preserve">
+    <value>Practicamos la colaboración y cooperación con nuestros pares y nuestros clientes con el objetivo de ganar-ganar.</value>
+  </data>
+  <data name="We adapt to your needs complying to quality of service standards" xml:space="preserve">
+    <value>Nos adaptamos a tus tiempos y necesidades, con responsabilidad y compromiso en nuestro servicio de calidad.</value>
+  </data>
+  <data name="We are constantly training to bring you scalable and modular solutions" xml:space="preserve">
+    <value>Nos mantenemos en constante actualización de conocimientos sobre los avances mundiales en lenguajes de programación, estrategias de posicionamiento web y marketing digital.</value>
+  </data>
+  <data name="We create what your company needs to keep growing!" xml:space="preserve">
+    <value>¡Creamos lo que tu empresa necesita para seguir creciendo!</value>
+  </data>
+  <data name="We design your website to fit your needs and goals" xml:space="preserve">
+    <value>Diseñamos tu sitio web de acuerdo a tus necesidades y objetivos.</value>
+  </data>
+  <data name="We listen to our clients and adapt to their needs" xml:space="preserve">
+    <value>Escuchamos los requerimientos necesarios para la planificación del trabajo, priorizando lo que es importante para tu empresa.</value>
+  </data>
+  <data name="Web Application Development" xml:space="preserve">
+    <value>Desarrollo Web</value>
+  </data>
+  <data name="Work ethics" xml:space="preserve">
+    <value>Cómo trabajamos.</value>
+  </data>
+  <data name="Years of experience" xml:space="preserve">
+    <value>Años de Experiencia</value>
+  </data>
+  <data name="Years of experience in IT development, public project management, SEO, SEM, database, data analysis" xml:space="preserve">
+    <value>Años de experiencia en programación, desarrollo de proyectos públicos, posicionamiento web, diseño de bases de datos y programas estadísticos.</value>
+  </data>
+</root>

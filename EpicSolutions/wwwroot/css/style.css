@@ -7,14 +7,24 @@ body {
   background: #fff;
 }
 
+.pinimg{
+    width: 1.2em;
+    border-radius: 15px;
+}
+
+.gtco-container .portafolio img {
+    max-height: 160px;
+    max-width: 200px;
+}
+
 #page {
-  position: relative;
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
 }
 .offcanvas #page {
   overflow: hidden;
@@ -39,6 +49,7 @@ a {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    text-decoration: none;
 }
     a:hover, a:active, a:focus {
         color: #66D37E;
@@ -175,6 +186,7 @@ color: #66D37E;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  text-decoration: none;
 }
 .gtco-nav ul li > a:hover, .gtco-nav ul li > a:focus, .gtco-nav ul li > a:active {
   color: white;
@@ -1244,6 +1256,7 @@ form label {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  text-decoration: none;
 }
 .gototop.active {
   opacity: 1;
@@ -1776,6 +1789,7 @@ form label {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  text-decoration: none;
 }
 .gtco-card-item figure {
   height: 240px;
@@ -1816,8 +1830,8 @@ form label {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  max-height: 180px;
-  max-width: 200px;
+  max-height: 490px;
+  max-width: 340px;
 }
 .gtco-card-item .gtco-text {
   padding: 0px 10px 10px 20px;

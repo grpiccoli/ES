@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
-<html lang="es">
+<html lang="@Localizer["en"]">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@ViewData["Title"] - EpicSolutions</title>
-    <meta name="author" content="Antonela Prieto" />
+    <meta name="author" content="Guillermo Antonio Rodríguez Piccoli" />
     <open-graph-website site-name="Epic Solutions"
                         title=@ViewData["Title"]
                         main-image="@(new OpenGraphImage(
@@ -62,7 +62,7 @@
         window.fbAsyncInit = function () {
             FB.init({
                 xfbml: true,
-                version: 'v5.0'
+                version: 'v7.0'
             });
         };
 
@@ -70,7 +70,7 @@
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+            js.src = 'https://connect.facebook.net/@Localizer["en_GB"]/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -79,13 +79,15 @@
          attribution=setup_tool
          page_id="605999509841044"
          theme_color="#67b868"
-         logged_in_greeting="Hello! ¡Hola!"
-         logged_out_greeting="Hello! ¡Hola!">
+         logged_in_greeting="@Localizer["Hi! How can we assist you?"]"
+         logged_out_greeting="@Localizer["Thank you for chatting with us"]"
+        greeting_dialog_display="fade"
+        greeting_dialog_delay="4">
     </div>
     <div class="gtco-loader"></div>
     <div id="page">
         <div class="page-inner">
-            <div id="head-top" style="position: absolute; width: 100%; top: 0; ">
+            <div id="head-top" style="position: absolute; width: 100%; top: 0;">
                 <div class="gtco-top">
                     <div class="container-fluid">
                         <div class="row">
@@ -96,6 +98,8 @@
                                 <ul class="gtco-social-top">
                                     <li><a href="https://www.facebook.com/epicsolutions.cl/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
                                     <li><a href="https://www.linkedin.com/company/epicsolutionscl/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/guillermo-rodriguez-piccoli/" target="_blank"><img src="~/images/GARP.jpg" class="pinimg" /></a></li>
+                                    <li><a href="https://www.linkedin.com/in/e-antonela-prieto-91130681/" target="_blank"><img src="~/images/EAPH.jpg" class="pinimg" /></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -106,12 +110,12 @@
                         <div class="row justify-content-md-center">
                             <div class="col-xs-12 text-center menu-1">
                                 <ul>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="Services">Servicios</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="Portafolio">Portafolio</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="Partners">Alianzas</a></li>
-                                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contacto</a></li>
-                                </ul>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Index">@Localizer["Home"]</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Services">@Localizer["Services"]</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Portafolio">@Localizer["Portfolio"]</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Partners">@Localizer["Partners"]</a></li>
+                                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">@Localizer["Contact"]</a></li>
+</ul>
                             </div>
                         </div>
                     </div>
@@ -137,30 +141,30 @@
                     <div class="row row-p	b-md">
                         <div class="col-md-4">
                             <div class="gtco-widget">
-                                <h3>Sobre Nosotros</h3>
-                                <p>Somos una empresa dedicada al rubro de la informática y marketing digital. Ofrecemos servicios a la medida de tus necesidades para llevar tu empresa al siguiente nivel.</p>
-                                <p><a asp-area="" asp-controller="Home" asp-action="About">Conocer más...</a></p>
+                                <h3>@Localizer["About us"]</h3>
+                                <p>@Localizer["Our company develops computing and digital marketing solutions tailored to your needs to take your company to the next level."]</p>
+                                <p><a asp-area="" asp-controller="Home" asp-action="About">@Localizer["Learn more ..."]</a></p>
                             </div>
                         </div>
                         <div class="col-md-4 col-md-push-1">
                             <div class="gtco-widget">
-                                <h3><a asp-area="" asp-controller="Home" asp-action="Services">Servicios</a></h3>
+                                <h3><a asp-area="" asp-controller="Home" asp-action="Services">@Localizer["Services"]</a></h3>
                                 <ul class="gtco-footer-links">
-                                    <li>SEO y Posicionamiento web</li>
-                                    <li>Desarrollo Web</li>
-                                    <li>Base de datos</li>
-                                    <li>Integración de plataformas</li>
-                                    <li>Desarrollo de API´s</</li>
-                                    <li>Marketing Digital</li>
+                                    <li>@Localizer["Search Engine Optimization and Digital Presence"]</li>
+                                    <li>@Localizer["Web Application Development"]</li>
+                                    <li>@Localizer["Databases"]</li>
+                                    <li>@Localizer["Platform integration"]</li>
+                                    <li>@Localizer["RESTful API and microservices"]</</li>
+                                    <li>@Localizer["Search Engine Marketing and microsegmentation"]</li>
                                 </ul>
                             </div>
                         </div>
 
                         <div class="col-md-3 col-md-push-1">
                             <div class="gtco-widget">
-                                <h3>Contáctanos</h3>
+                                <h3>@Localizer["Contact us"]</h3>
                                 <ul class="gtco-quick-contact">
-                                    <li><a href="tel:+56952550410"><i class="fas fa-phone"></i> +56 9 5255 0410</a></li>
+                                    @*<li><a href="tel:+56952550410"><i class="fas fa-phone"></i> +56 9 5255 0410</a></li>*@
                                     <li><a href="mailto:contacto@epicsolutions.cl"><i class="fas fa-envelope"></i> contacto@epicsolutions.cl</a></li>
                                 </ul>
                             </div>
