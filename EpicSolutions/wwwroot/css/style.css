@@ -12,6 +12,10 @@ body {
     border-radius: 15px;
 }
 
+.fb_dialog.fb_dialog_advanced{
+    right: 100px;
+}
+
 .gtco-container .portafolio img {
     max-height: 160px;
     max-width: 200px;
@@ -784,17 +788,16 @@ form label {
   position: relative;
   overflow:visible;
 }
-.flex-section .flex-img:before {
-  left: -110px;
-  content: "";
-  position: absolute;
-  height: 120%;
-  background: #f6f9fc;
-  width: 100px;
-  -webkit-transform: skewX(-12deg);
-  -moz-transform: skewX(-12deg);
-  transform: skewX(-12deg);
-}
+    .flex-section .flex-img:before {
+        border-top: 800px solid #f6f9fc;
+        border-right: 180px solid transparent;
+        content: "";
+        position: absolute;
+        height: 100%;
+        background: transparent;
+        width: 35%;
+    }
+
 @media screen and (max-width: 768px) {
   .flex-section .flex-img:before {
     display: none;
@@ -847,17 +850,16 @@ form label {
 .flex-section.reverse .flex-img:before {
   display: none;
 }
-.flex-section.reverse .flex-img:after {
-  right: -120px !important;
-  content: "";
-  position: absolute;
-  height: 120%;
-  background: #fff;
-  width: 100px;
-  -webkit-transform: skewX(12deg);
-  -moz-transform: skewX(12deg);
-  transform: skewX(12deg);
-}
+    .flex-section.reverse .flex-img:after {
+        right: -10px !important;
+        border-top: 800px solid #f6f9fc;
+        border-left: 180px solid transparent;
+        content: "";
+        position: absolute;
+        height: 100%;
+        background: transparent;
+        width: 35%;
+    }
 @media screen and (max-width: 768px) {
   .flex-section.reverse .flex-img:after {
     display: none;
@@ -2032,4 +2034,8 @@ form label {
   line-height: 1.5;
   font-weight: 300;
 }
+    .check-li li span {
+        color: #66D37E;
+        margin-right: 20px;
+    }
 /*# sourceMappingURL=style.css.map*/ 

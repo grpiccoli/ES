@@ -101,7 +101,11 @@
     },
     {
       "library": "mvcct-enhancer@1.1.0",
-      "destination": "wwwroot/lib/mvcct-enhancer"
+      "destination": "wwwroot/lib/mvcct-enhancer",
+      "files": [
+        "mvcct.enhancer.min.js",
+        "enhancer-modules/mvcct.enhancer.input.basic.min.js"
+      ]
     },
     {
       "library": "popper.js@2.0.0-next.4",

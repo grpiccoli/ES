@@ -1,37 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Epic Solutions";
-    ViewData["titulo"] = "Soluciones<strong> a tu medida</strong>";
-    ViewData["subtitulo"] = "Servicios personalizados.";
-
+    ViewData["Title"] = Localizer["Epic Solutions"].Value;
+    ViewData["titulo"] = Localizer["Solutions <strong>tailored to your needs</strong>"].Value;
+    ViewData["subtitulo"] = Localizer["Customized services"].Value;
 }
 
 <div class="flex-section gtco-gray-bg">
     <div class="gtco-col-1">
-        <div class="text">
+        <div class="text text-over">
             <div class="row row-pb-sm">
                 <div class="col-md-12">
-                    <h2>SEO y Marketing Digital</h2>
+                    <h2>@Localizer["Search Engine Optimization and Search Engine Marketing"]</h2>
 
-                    <p>Search engine optimization (SEO) u Optimización de Motores de Búsqueda.</p>
+                    <p>@Localizer["Search engine optimization (SEO) a.k.a. Organic Positioning"]</p>
                     <p>
-                        Intervención de tu sitio web para mejorar su visibilidad orgánica en los principales motores de búsqueda. <br />Campañas de marketing digital en
-                        Facebook, Instagram, YouTube y Google AdWords.
+                        @Localizer["Website metadata improvement for better digital presence and organic positioning in all main web search engines"]
+                        <br />
+                        @Localizer["Digital Marketing Campaigns in"] Facebook, Instagram, YouTube @Localizer["&"] Google AdWords.
                     </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Editar y agregar contenido</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Indexación web</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Palabras claves</li>
+                        <li><span><i class="fas fa-check"></i></span>@Localizer["Editing and adding content"]</li>
+                        <li><span><i class="fas fa-check"></i></span>@Localizer["Website Indexation"]</li>
+                        <li><span><i class="fas fa-check"></i></span>@Localizer["Evaluation of key search terms"]</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Redes Sociales</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Google Maps</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Google Adwords</li>
+                        <li><span><i class="fas fa-check"></i></span>@Localizer["Social networks"]</li>
+                        <li><span><i class="fas fa-check"></i></span>Google Maps</li>
+                        <li><span><i class="fas fa-check"></i></span>Google Adwords</li>
                     </ul>
                 </div>
             </div>
@@ -42,28 +42,28 @@
 
 <div class="flex-section reverse">
     <div class="gtco-col-1">
-        <div class="text">
+        <div class="text text-over">
             <div class="row row-pb-sm">
                 <div class="col-md-12">
-                    <h2>Bases de datos</h2>
-                    <p>Diseño de bases de datos e integración a sistemas preexistentes.</p>
-                    <p>Desarrollo de interfaz de base de datos con visualización de datos procesados.</p>
-                    <p>Actualización, modificación, ampliación y procesamiento de bases de datos.</p>
+                    <h2>@Localizer["Databases"]</h2>
+                    <p>@Localizer["Database design and integration to pre-existing systems"]</p>
+                    <p>@Localizer["Database graphical user interphase with data visualization aid"]</p>
+                    <p>@Localizer["Update, modification, upgrade and database parsing and pre-processing"]</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Data Mart</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Data Warehouse</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>ETL</li>
+                        <li><span><i class="fas fa-check"></i></span>Data Mart</li>
+                        <li><span><i class="fas fa-check"></i></span>Data Warehouse</li>
+                        <li><span><i class="fas fa-check"></i></span>ETL</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>OLAP y OLTP</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>DPF y MDC</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>JSON</li>
+                        <li><span><i class="fas fa-check"></i></span>OLAP @Localizer["&"] OLTP</li>
+                        <li><span><i class="fas fa-check"></i></span>DPF @Localizer["&"] MDC</li>
+                        <li><span><i class="fas fa-check"></i></span>JSON</li>
                     </ul>
                 </div>
             </div>
@@ -75,28 +75,27 @@
 
 <div class="flex-section gtco-gray-bg">
     <div class="gtco-col-1">
-        <div class="text">
+        <div class="text text-over">
             <div class="row row-pb-sm">
                 <div class="col-md-12">
-                    <h2>Desarrollo Web</h2>
-
-                    <p>Desarrollamos el sitio web o plataforma adecuada al tamaño y objetivos de tu empresa.</p>
-                    <p>Diseñamos sitios adaptados a cualquier dispositvo de visualización (computador móvil y de escritorio, tabletas, teléfonos móviles).</p>
+                    <h2>@Localizer["Web Development"]</h2>
+                    <p>@Localizer["We develop a website or platform best suited to the task and business goals"]</p>
+                    <p>@Localizer["Responsive web design compatible with any device (desktop, laptop, tablet and mobile devices)"]</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Aplicaciones Web</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Gestor de contenido y datos</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Comercio electrónico</li>
+                        <li><span><i class="fas fa-check"></i></span>@Localizer["Web applications"]</li>
+                        <li><span><i class="fas fa-check"></i></span>Gestor de contenido y datos</li>
+                        <li><span><i class="fas fa-check"></i></span>Comercio electrónico</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Web dinámica</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Plataformas integradas</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Web<br /> estática</li>
+                        <li><span><i class="fas fa-check"></i></span>Web dinámica</li>
+                        <li><span><i class="fas fa-check"></i></span>Plataformas integradas</li>
+                        <li><span><i class="fas fa-check"></i></span>Web<br /> estática</li>
                     </ul>
                 </div>
             </div>
@@ -107,7 +106,7 @@
 
 <div class="flex-section reverse">
     <div class="gtco-col-1">
-        <div class="text">
+        <div class="text text-over">
             <div class="row row-pb-sm">
                 <div class="col-md-12">
                     <h2>Desarrollo de API´s</h2>
@@ -118,16 +117,16 @@
             <div class="row">
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Integración</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Adaptabilidad</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Intercambio de datos</li>
+                        <li><span><i class="fas fa-check"></i></span>Integración</li>
+                        <li><span><i class="fas fa-check"></i></span>Adaptabilidad</li>
+                        <li><span><i class="fas fa-check"></i></span>Intercambio de datos</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Estabilidad</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Seguridad</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Integridad</li>
+                        <li><span><i class="fas fa-check"></i></span>Estabilidad</li>
+                        <li><span><i class="fas fa-check"></i></span>Seguridad</li>
+                        <li><span><i class="fas fa-check"></i></span>Integridad</li>
                     </ul>
                 </div>
             </div>
@@ -138,10 +137,10 @@
 </div>
 <div class="flex-section gtco-gray-bg">
     <div class="gtco-col-1">
-        <div class="text">
+        <div class="text text-over">
             <div class="row row-pb-sm">
                 <div class="col-md-12">
-                    <h2>Integración de Plataformas</h2>
+                    <h2>@Localizer["Platform integration"]</h2>
 
                     <p>Diseñamos interfaces que permitan compilar varias fuentes de información en una sola plataforma.</p>
                     <p>Integración de bases de datos, plataformas del mismo rubro comercial e informativo, unión de gremios empresariales.</p>
@@ -150,16 +149,16 @@
             <div class="row">
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Multiplataformas</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Integración de Bases de datos</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Compilación y procesamiento de datos</li>
+                        <li><span><i class="fas fa-check"></i></span>Multiplataformas</li>
+                        <li><span><i class="fas fa-check"></i></span>Integración de Bases de datos</li>
+                        <li><span><i class="fas fa-check"></i></span>Compilación y procesamiento de datos</li>
                     </ul>
                 </div>
                 <div class="col-md-6">
                     <ul class="check-li">
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Interfaces gráficas</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Conexión y enlaces externos</li>
-                        <li><span style="color:#66D37E;margin-right:20px;"><i class="fas fa-check"></i></span>Gremios <br /> informativos</li>
+                        <li><span><i class="fas fa-check"></i></span>Interfaces gráficas</li>
+                        <li><span><i class="fas fa-check"></i></span>Conexión y enlaces externos</li>
+                        <li><span><i class="fas fa-check"></i></span>Gremios <br /> informativos</li>
                     </ul>
                 </div>
             </div>
