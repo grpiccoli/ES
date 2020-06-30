@@ -13,7 +13,7 @@ body {
 }
 
 .fb_dialog.fb_dialog_advanced{
-    right: 100px;
+    right: 100px !important;
 }
 
 .gtco-container .portafolio img {
