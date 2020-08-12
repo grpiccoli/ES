@@ -16,13 +16,13 @@ namespace EpicSolutions.Services
 
         public DefaultImageMiddleware(RequestDelegate next)
         {
-            this._next = next;
+            _next = next;
         }
 
         public async Task Invoke(HttpContext context)
         {
             await _next(context).ConfigureAwait(false);
-            if (context.Response.StatusCode == 404)
+            if (context?.Response.StatusCode == 404)
             {
                 var contentType = context.Request.Headers["accept"].ToString().ToUpperInvariant();
                 if (contentType.StartsWith("IMAGE", StringComparison.InvariantCulture))
@@ -40,11 +40,11 @@ namespace EpicSolutions.Services
 
                 using FileStream fs = File.OpenRead(path);
                 byte[] bytes = new byte[fs.Length];
-                await fs.ReadAsync(bytes, 0, bytes.Length).ConfigureAwait(false);
+                await fs.ReadAsync(bytes.AsMemory(0, bytes.Length)).ConfigureAwait(false);
                 //this header is use for browser cache, format like: "Mon, 15 May 2017 07:03:37 GMT". 
                 context.Response.Headers.Append("Last-Modified", $"{File.GetLastWriteTimeUtc(path).ToString("ddd, dd MMM yyyy HH:mm:ss", CultureInfo.InvariantCulture)} GMT");
 
-                await context.Response.Body.WriteAsync(bytes, 0, bytes.Length).ConfigureAwait(false);
+                await context.Response.Body.WriteAsync(bytes.AsMemory(0, bytes.Length)).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
