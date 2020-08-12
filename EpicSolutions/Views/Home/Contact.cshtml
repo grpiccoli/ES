@@ -2,8 +2,8 @@
 
 @{
     ViewData["Title"] = "Epic Solutions";
-    ViewData["titulo"] = "<strong>Contáctanos</strong>";
-    ViewData["subtitulo"] = "Atendemos tus necesidades.";
+    ViewData["titulo"] = Localizer["<strong>Contact us</strong>"].Value;
+    ViewData["subtitulo"] = Localizer["We tend to your software needs"].Value;
 }
 
 <div class="gtco-section gtco-gray-bg">
@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="col-md-6" data-aos="fade-up">
-                    <h3>Envíanos tu consulta</h3>
+                    <h3>@Localizer["Send us your requests"]</h3>
                     @*<form asp-action="Contact" method="post">
                         <div class="row form-group">
                             <div class="col-md-12">
@@ -45,10 +45,10 @@
                 <div class="col-md-5 col-md-push-1" data-aos="fade-up">
 
                     <div class="gtco-contact-info">
-                        <h3>Información de Contacto</h3>
+                        <h3>@Localizer["Contact information"]</h3>
                         <ul>
                             <li class="razon social">
-                                Empresas Piccoli Limitada <br> RUT: 76.473.272-3 <br> Epic Solutions
+                                @Localizer["Piccoli Co Ltd"]<br> RUT: 76.473.272-3 <br> Epic Solutions
                             </li>
                             @*<li class="phone">
                                 <a href="tel:+56952550410">
@@ -63,7 +63,7 @@
                                     <span style="color:lightgray;font-size:large;margin-right:20px;">
                                         <icon class="fas fa-envelope"></icon>
                                     </span>
-                                    contacto@epicsolutions.cl
+                                    @Localizer["contact@epicsolutions.cl"]
                                 </a>
                             </li>
                             <li class="url">

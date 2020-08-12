@@ -1,6 +1,9 @@
 {
-  "name": "myproject",
+  "name": "epicsolutions",
   "version": "1.0.0",
+  "description": "Epic Solutions Consulting",
+  "repository": {},
+  "license": "MIT",
   "devDependencies": {
     "cldr-data-downloader": "0.3.5"
   }

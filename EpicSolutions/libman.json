@@ -38,7 +38,7 @@
       "destination": "wwwroot/lib/cldr-data"
     },
     {
-      "library": "cldrjs@0.5.1",
+      "library": "cldrjs@0.5.4",
       "destination": "wwwroot/lib/cldrjs",
       "files": [
         "dist/cldr.js",

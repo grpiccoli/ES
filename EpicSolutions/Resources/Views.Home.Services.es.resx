@@ -120,8 +120,23 @@
   <data name="&amp;" xml:space="preserve">
     <value>y</value>
   </data>
+  <data name="Adaptability" xml:space="preserve">
+    <value>Adaptabilidad</value>
+  </data>
+  <data name="API development" xml:space="preserve">
+    <value>Desarrollo de APIs</value>
+  </data>
   <data name="Customized services" xml:space="preserve">
     <value>Servicios personalizados.</value>
+  </data>
+  <data name="Data and content management" xml:space="preserve">
+    <value>Gestor de contenido y datos</value>
+  </data>
+  <data name="Data exchange" xml:space="preserve">
+    <value>Intercambio de datos</value>
+  </data>
+  <data name="Data processing and data compiling" xml:space="preserve">
+    <value>Compilación y procesamiento de datos</value>
   </data>
   <data name="Database design and integration to pre-existing systems" xml:space="preserve">
     <value>Diseño de bases de datos e integración a sistemas preexistentes.</value>
@@ -129,17 +144,50 @@
   <data name="Database graphical user interphase with data visualization aid" xml:space="preserve">
     <value>Desarrollo de interfaz de base de datos con visualización de datos procesados.</value>
   </data>
+  <data name="Database integration" xml:space="preserve">
+    <value>Integración de Bases de datos</value>
+  </data>
+  <data name="Database integration, unificaton of business guilds and global platforms for different fields" xml:space="preserve">
+    <value>Integración de bases de datos, plataformas del mismo rubro comercial e informativo, unión de gremios empresariales</value>
+  </data>
   <data name="Databases" xml:space="preserve">
     <value>Bases de datos</value>
   </data>
   <data name="Digital Marketing Campaigns in" xml:space="preserve">
     <value>Campañas de marketing digital en</value>
   </data>
+  <data name="Dynamic websites" xml:space="preserve">
+    <value>Web dinámica</value>
+  </data>
   <data name="Editing and adding content" xml:space="preserve">
     <value>Editar y agregar contenido</value>
   </data>
   <data name="Evaluation of key search terms" xml:space="preserve">
     <value>Palabras claves</value>
+  </data>
+  <data name="External connections" xml:space="preserve">
+    <value>Conexión y enlaces externos</value>
+  </data>
+  <data name="Graphical Interfaces" xml:space="preserve">
+    <value>Interfaces gráficas</value>
+  </data>
+  <data name="Information guilds" xml:space="preserve">
+    <value>Gremios informativos</value>
+  </data>
+  <data name="Integral" xml:space="preserve">
+    <value>Integridad</value>
+  </data>
+  <data name="Integrated platforms" xml:space="preserve">
+    <value>Plataformas integradas</value>
+  </data>
+  <data name="Integration" xml:space="preserve">
+    <value>Integración</value>
+  </data>
+  <data name="Interface design that allows to unify multiple sources into one platform" xml:space="preserve">
+    <value>Diseñamos interfaces que permitan compilar varias fuentes de información en una sola plataforma</value>
+  </data>
+  <data name="Multiplatform" xml:space="preserve">
+    <value>Multiplataformas</value>
   </data>
   <data name="Platform integration" xml:space="preserve">
     <value>Integración de Plataformas</value>
@@ -153,20 +201,41 @@
   <data name="Search Engine Optimization and Search Engine Marketing" xml:space="preserve">
     <value>SEO y Marketing Digital</value>
   </data>
+  <data name="Security" xml:space="preserve">
+    <value>Seguridad</value>
+  </data>
   <data name="Social networks" xml:space="preserve">
     <value>Redes Sociales</value>
+  </data>
+  <data name="Software intermediary that allows two applications to talk to each other" xml:space="preserve">
+    <value>Intermediarios de software con metodos de comunicación definidos que permiten conectar dos aplicaciones entre sí</value>
   </data>
   <data name="Solutions &lt;strong&gt;tailored to your needs&lt;/strong&gt;" xml:space="preserve">
     <value>Soluciones &lt;strong&gt;a tu medida&lt;/strong&gt;</value>
   </data>
+  <data name="Stability" xml:space="preserve">
+    <value>Estabilidad</value>
+  </data>
+  <data name="Static websites" xml:space="preserve">
+    <value>Web estática</value>
+  </data>
   <data name="Update, modification, upgrade and database parsing and pre-processing" xml:space="preserve">
     <value>Actualización, modificación, ampliación y procesamiento de bases de datos.</value>
+  </data>
+  <data name="We create Application Programming Interfaces for your preexisting software" xml:space="preserve">
+    <value>Reutilizamos el software de tu empresa, creando intefaces de programación de aplicaciones (APIs)</value>
   </data>
   <data name="We develop a website or platform best suited to the task and business goals" xml:space="preserve">
     <value>Desarrollamos el sitio web o plataforma adecuada al tamaño y objetivos de tu empresa.</value>
   </data>
+  <data name="We offer high quality for the services your business needs!" xml:space="preserve">
+    <value>¡Te ofrecemos una alta calidad en los servicios que necesita tu empresa!</value>
+  </data>
   <data name="Web applications" xml:space="preserve">
     <value>Aplicaciones Web</value>
+  </data>
+  <data name="Web commerce" xml:space="preserve">
+    <value>Comercio electrónico</value>
   </data>
   <data name="Web Development" xml:space="preserve">
     <value>Desarrollo Web</value>

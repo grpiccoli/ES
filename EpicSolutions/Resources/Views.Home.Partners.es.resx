@@ -117,64 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About us" xml:space="preserve">
-    <value>Sobre Nosotros</value>
+  <data name="&lt;strong&gt;Partnerships&lt;/strong&gt;" xml:space="preserve">
+    <value>Nuestras &lt;strong&gt;Alianzas&lt;/strong&gt;</value>
   </data>
-  <data name="Contact" xml:space="preserve">
-    <value>Contacto</value>
+  <data name="Project management, SCRUM" xml:space="preserve">
+    <value>Gestión de proyectos, SCRUM</value>
   </data>
-  <data name="Contact us" xml:space="preserve">
-    <value>Contáctanos</value>
+  <data name="Rodas Enginering" xml:space="preserve">
+    <value>Rodas Ingeniería</value>
   </data>
-  <data name="contact@epicsolutions.cl" xml:space="preserve">
-    <value>contacto@epicsolutions.cl</value>
+  <data name="Training, consulting, security and developments" xml:space="preserve">
+    <value>Capacitaciones, consultoría, seguridad y desarrollos a medida.</value>
   </data>
-  <data name="Databases" xml:space="preserve">
-    <value>Base de datos</value>
-  </data>
-  <data name="en" xml:space="preserve">
-    <value>es</value>
-  </data>
-  <data name="en_GB" xml:space="preserve">
-    <value>es_LA</value>
-  </data>
-  <data name="Hello!" xml:space="preserve">
-    <value>¡Hola!</value>
-  </data>
-  <data name="Home" xml:space="preserve">
-    <value>Inicio</value>
-  </data>
-  <data name="Learn more ..." xml:space="preserve">
-    <value>Conocer más ...</value>
-  </data>
-  <data name="Our company develops computing and digital marketing solutions tailored to your needs to take your company to the next level." xml:space="preserve">
-    <value>Somos una empresa dedicada al rubro de la informática y marketing digital. Ofrecemos servicios a la medida de tus necesidades para llevar tu empresa al siguiente nivel.</value>
-  </data>
-  <data name="Partners" xml:space="preserve">
-    <value>Alianzas</value>
-  </data>
-  <data name="Piccoli Co Ltd. All Rights Reserved." xml:space="preserve">
-    <value>Empresas Piccoli Limitada. Todos los derechos reservados.</value>
-  </data>
-  <data name="Platform integration" xml:space="preserve">
-    <value>Integración de plataformas</value>
-  </data>
-  <data name="Portfolio" xml:space="preserve">
-    <value>Portafolio</value>
-  </data>
-  <data name="RESTful API and microservices" xml:space="preserve">
-    <value>Desarrollo de APIs y microservicios</value>
-  </data>
-  <data name="Search Engine Marketing and microsegmentation" xml:space="preserve">
-    <value>Marketing Digital y microsegmentación</value>
-  </data>
-  <data name="Search Engine Optimization and Digital Presence" xml:space="preserve">
-    <value>Optimización de búscadores (SEO) y Posicionamiento web</value>
-  </data>
-  <data name="Services" xml:space="preserve">
-    <value>Servicios</value>
-  </data>
-  <data name="Web Application Development" xml:space="preserve">
-    <value>Desarrollo Web</value>
+  <data name="Working and management network" xml:space="preserve">
+    <value>Red de trabajo y gestión.</value>
   </data>
 </root>
