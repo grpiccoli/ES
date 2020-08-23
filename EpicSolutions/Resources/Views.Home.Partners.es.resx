@@ -120,11 +120,20 @@
   <data name="&lt;strong&gt;Partnerships&lt;/strong&gt;" xml:space="preserve">
     <value>Nuestras &lt;strong&gt;Alianzas&lt;/strong&gt;</value>
   </data>
+  <data name="Centre for Fisheries and Aquaculture Applied Research, UST" xml:space="preserve">
+    <value>Centro Acuícola Pesquero de Investigación Aplicada, UST</value>
+  </data>
   <data name="Project management, SCRUM" xml:space="preserve">
     <value>Gestión de proyectos, SCRUM</value>
   </data>
+  <data name="Research, development and innovation for sustainable fisheries and aquaculture" xml:space="preserve">
+    <value>Investigación, Desarrollo e innovación para una pesquería y acuicultura sustentable</value>
+  </data>
   <data name="Rodas Enginering" xml:space="preserve">
     <value>Rodas Ingeniería</value>
+  </data>
+  <data name="Scientific Research, Development and Innovation" xml:space="preserve">
+    <value>Investigación científica, desarrollo e innovación</value>
   </data>
   <data name="Training, consulting, security and developments" xml:space="preserve">
     <value>Capacitaciones, consultoría, seguridad y desarrollos a medida.</value>
