@@ -64,7 +64,7 @@
                     case ".woff2":
                     case ".woff":
                     case ".ttf":
-                        this.Block(@<link href="@href" rel="preload" asp-subresource-integrity-href="@f" as="font" type="font/@ext.TrimStart('.')" />, style);
+                        this.Block(@<link href="@href" rel="preload" as="font" type="font/@ext.TrimStart('.')" crossorigin="anonymous" />, style);
                         break;
                 }
             }
