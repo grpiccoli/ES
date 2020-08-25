@@ -9,7 +9,7 @@
     {
         var bundles = Bundler.GetBundles(lib);
         var continuar = false;
-        if (bundles != null)
+        if (bundles != null && bundles.Any())
         {
             foreach (var bundle in bundles)
             {
@@ -26,7 +26,7 @@
                     case ".woff2":
                     case ".woff":
                     case ".ttf":
-                        this.Block(@<link href="@file" rel="preload" as="font" type="font/@ext" asp-append-version="true" />, style);
+                        this.Block(@<link href="@file" rel="preload" as="font" type="font/@ext.TrimStart('.')" asp-append-version="true" />, style);
                         break;
                 }
                 continuar = true;
@@ -34,7 +34,7 @@
         }
         if (continuar) { continue; }
         var l = Libman.GetLibs(lib);
-        if (l != null)
+        if (l != null && l.Files.Any())
         {
             foreach (var file in l.Files)
             {
@@ -64,7 +64,7 @@
                     case ".woff2":
                     case ".woff":
                     case ".ttf":
-                        this.Block(@<link href="@href" rel="preload" asp-subresource-integrity-href="@f" as="font" type="font/@ext" />, style);
+                        this.Block(@<link href="@href" rel="preload" asp-subresource-integrity-href="@f" as="font" type="font/@ext.TrimStart('.')" />, style);
                         break;
                 }
             }
