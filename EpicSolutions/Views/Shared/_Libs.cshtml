@@ -9,26 +9,33 @@
     {
         var bundles = Bundler.GetBundles(lib);
         var continuar = false;
-        if (bundles != null) 
-        { 
+        if (bundles != null)
+        {
             foreach (var bundle in bundles)
             {
                 var file = bundle.OutputFileName.Replace("wwwroot", "~");
-                if (file.Contains(".css"))
+                var ext = System.IO.Path.GetExtension(file);
+                switch (ext)
                 {
+                    case "css":
                         this.Block(@<link href="@file" rel="stylesheet" asp-append-version="true" />, style);
-                }
-                else
-                {
+                        break;
+                    case "js":
                         this.Block(@<script src="@file" asp-append-version="true"></script>, script);
+                        break;
+                    case "woff2":
+                    case "woff":
+                    case "ttf":
+                        this.Block(@<link href="@file" rel="preload" as="font" type="font/@ext" asp-append-version="true" />, style);
+                        break;
                 }
                 continuar = true;
             }
         }
         if (continuar) { continue; }
         var l = Libman.GetLibs(lib);
-        if (l != null) 
-        { 
+        if (l != null)
+        {
             foreach (var file in l.Files)
             {
                 var url = "unpkg.com";
@@ -45,13 +52,20 @@
                 }
                 var f = $"{l.Destination}/{file}";
                 var href = $"{Context.Request.Scheme}://{url}/{l.Library}/{file}";
-                if (file.Contains(".css"))
+                var ext = System.IO.Path.GetExtension(file);
+                switch (ext)
                 {
-                    this.Block(@<link href="@href" rel="stylesheet" asp-subresource-integrity-href="@f" asp-fallback-href="@f"/>, style);
-                }
-                else if (file.Contains(".js"))
-                {
-                    this.Block(@<script src="@href" asp-subresource-integrity-src="@f" asp-fallback-src="@f" ></script>, script);
+                    case "css":
+                        this.Block(@<link href="@href" rel="stylesheet" asp-subresource-integrity-href="@f" asp-fallback-href="@f"/>, style);
+                        break;
+                    case "js":
+                        this.Block(@<script src="@href" asp-subresource-integrity-src="@f" asp-fallback-src="@f" ></script>, script);
+                        break;
+                    case "woff2":
+                    case "woff":
+                    case "ttf":
+                        this.Block(@<link href="@href" rel="preload" asp-subresource-integrity-href="@f" as="font" type="font/@ext" />, style);
+                        break;
                 }
             }
         }
