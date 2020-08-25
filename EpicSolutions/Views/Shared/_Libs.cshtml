@@ -17,15 +17,15 @@
                 var ext = System.IO.Path.GetExtension(file);
                 switch (ext)
                 {
-                    case "css":
+                    case ".css":
                         this.Block(@<link href="@file" rel="stylesheet" asp-append-version="true" />, style);
                         break;
-                    case "js":
+                    case ".js":
                         this.Block(@<script src="@file" asp-append-version="true"></script>, script);
                         break;
-                    case "woff2":
-                    case "woff":
-                    case "ttf":
+                    case ".woff2":
+                    case ".woff":
+                    case ".ttf":
                         this.Block(@<link href="@file" rel="preload" as="font" type="font/@ext" asp-append-version="true" />, style);
                         break;
                 }
@@ -55,15 +55,15 @@
                 var ext = System.IO.Path.GetExtension(file);
                 switch (ext)
                 {
-                    case "css":
+                    case ".css":
                         this.Block(@<link href="@href" rel="stylesheet" asp-subresource-integrity-href="@f" asp-fallback-href="@f"/>, style);
                         break;
-                    case "js":
+                    case ".js":
                         this.Block(@<script src="@href" asp-subresource-integrity-src="@f" asp-fallback-src="@f" ></script>, script);
                         break;
-                    case "woff2":
-                    case "woff":
-                    case "ttf":
+                    case ".woff2":
+                    case ".woff":
+                    case ".ttf":
                         this.Block(@<link href="@href" rel="preload" asp-subresource-integrity-href="@f" as="font" type="font/@ext" />, style);
                         break;
                 }
