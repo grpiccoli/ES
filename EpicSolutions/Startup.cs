@@ -127,7 +127,7 @@ namespace EpicSolutions
                 ContentTypeProvider = provider,
                 OnPrepareResponse = ctx =>
                 {
-                    const int durationInSecond = 60 * 60 * 24;
+                    const int durationInSecond = 60 * 60 * 24 * 365;
                     ctx.Context.Response.Headers[HeaderNames.CacheControl] =
                         "public,max-age=" + durationInSecond;
                 }
