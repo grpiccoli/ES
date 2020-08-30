@@ -8,6 +8,9 @@
   <ItemGroup>
     <PackageReference Include="AspNetCore.IServiceCollection.AddIUrlHelper" Version="1.1.0" />
     <PackageReference Include="Boxed.AspNetCore.TagHelpers" Version="4.0.0" />
+    <PackageReference Include="Imageflow.NativeRuntime.ubuntu_18_04-x86_64" Version="1.4.10-rc50" />
+    <PackageReference Include="Imageflow.NativeRuntime.win-x86_64" Version="1.4.10-rc50" />
+    <PackageReference Include="Imageflow.Net" Version="0.7.1" />
     <PackageReference Include="Joonasw.AspNetCore.SecurityHeaders" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.7" />
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
