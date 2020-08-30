@@ -80,6 +80,8 @@ namespace EpicSolutions
 
             services.AddLocalization(options => options.ResourcesPath = "Resources");
 
+            services.AddProgressiveWebApp();
+
             services.AddUrlHelper();
 
             Libman.LoadJson();
@@ -112,12 +114,7 @@ namespace EpicSolutions
             var ch = _os == "Win32NT" ? @"\" : "/";
             var di = new DirectoryInfo(Path.Combine(env.ContentRootPath, string.Join(ch, path)));
             var supportedCultures = di.GetDirectories().Where(x => x.Name != "root").Select(x => new CultureInfo(x.Name)).ToList();
-            app.UseRequestLocalization(new RequestLocalizationOptions
-            {
-                DefaultRequestCulture = new RequestCulture(supportedCultures.FirstOrDefault(x => x.Name == "es")),
-                SupportedCultures = supportedCultures,
-                SupportedUICultures = supportedCultures
-            });
+            app.UseRequestLocalization(app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value);
 
             app.UseHttpsRedirection();
             FileExtensionContentTypeProvider provider = new FileExtensionContentTypeProvider();
