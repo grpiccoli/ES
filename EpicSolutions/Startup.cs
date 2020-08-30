@@ -18,6 +18,7 @@ using Microsoft.Extensions.Options;
 using System.IO;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Net.Http.Headers;
 
 namespace EpicSolutions
 {
@@ -123,7 +124,13 @@ namespace EpicSolutions
             provider.Mappings[".webmanifest"] = "application/manifest+json";
             app.UseStaticFiles(new StaticFileOptions()
             {
-                ContentTypeProvider = provider
+                ContentTypeProvider = provider,
+                OnPrepareResponse = ctx =>
+                {
+                    const int durationInSecond = 60 * 60 * 24;
+                    ctx.Context.Response.Headers[HeaderNames.CacheControl] =
+                        "public,max-age=" + durationInSecond;
+                }
             });
             app.UseCookiePolicy();
             app.UseForwardedHeaders(new ForwardedHeadersOptions
