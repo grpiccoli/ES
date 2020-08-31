@@ -34,6 +34,13 @@
   <ItemGroup>
     <DotNetCliToolReference Include="BundlerMinifier.Core" Version="3.2.435" />
   </ItemGroup>
+
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties wwwroot_4manifest_1json__JsonSchema="" />
+		</VisualStudio>
+	</ProjectExtensions>
+	
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptTarget>ES2015</TypeScriptTarget>
     <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
