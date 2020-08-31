@@ -19,6 +19,7 @@ using System.IO;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Net.Http.Headers;
+using WebEssentials.AspNetCore.Pwa;
 
 namespace EpicSolutions
 {
@@ -42,13 +43,18 @@ namespace EpicSolutions
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddTransient<IEmailSender, EmailSender>();
+            Libman.LoadJson();
+            Bundler.LoadJson();
 
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Latest)
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization()
                 .AddNewtonsoftJson();
+
+            services.AddProgressiveWebApp(new PwaOptions { EnableCspNonce = true });
 
             services.AddCors();
 
@@ -78,14 +84,7 @@ namespace EpicSolutions
                 options.SupportedUICultures = supportedCultures;
             });
 
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
-
-            services.AddProgressiveWebApp();
-
             services.AddUrlHelper();
-
-            Libman.LoadJson();
-            Bundler.LoadJson();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -2,6 +2,12 @@
   "name": "EpicSolutions",
   "short_name": "Epic",
   "description": "IT Consulting Services",
+  "scope": ".",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#66d37e",
+  "background_color": "#66d37e",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -20,8 +26,5 @@
       "purpose": "any maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "start_url": "/"
+  "prefer_related_applications": true
 }
