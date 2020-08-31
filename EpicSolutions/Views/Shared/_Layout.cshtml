@@ -103,8 +103,8 @@
          theme_color="#67b868"
          logged_in_greeting="@Localizer["Hi! How can we assist you?"]"
          logged_out_greeting="@Localizer["Thank you for chatting with us"]"
-        greeting_dialog_display="fade"
-        greeting_dialog_delay="4">
+         greeting_dialog_display="fade"
+         greeting_dialog_delay="4">
     </div>
     <div class="gtco-loader"></div>
     <div id="page">
@@ -114,14 +114,26 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xs-6 col-md-6">
-                                <div id="gtco-logo"><a asp-area="" asp-controller="Home" asp-action="Index"><img alt="epic solutions logo" src="~/images/epic_light_hor.svg" style="width:150px" asp-append-version="true" /></a></div>
+                                <div id="gtco-logo">
+                                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                                        <img alt="epic solutions logo" src="~/images/epic_light_hor.svg" style="width:150px" asp-append-version="true" />
+                                    </a>
+                                </div>
                             </div>
                             <div class="col-xs-6 col-md-6 social-icons">
                                 <ul class="gtco-social-top">
                                     <li><a href="https://www.facebook.com/epicsolutions.cl/" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i></a></li>
                                     <li><a href="https://www.linkedin.com/company/epicsolutionscl/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/in/guillermo-rodriguez-piccoli/" target="_blank" rel="noopener"><img src="~/images/GARP.webp" alt="Guillermo Rodríguez Piccoli" class="pinimg" asp-append-version="true"/></a></li>
-                                    <li><a href="https://www.linkedin.com/in/e-antonela-prieto-91130681/" target="_blank" rel="noopener"><img src="~/images/EAPH.webp" alt="Elisbeth Antonela Prieto" class="pinimg" asp-append-version="true"/></a></li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/guillermo-rodriguez-piccoli/" target="_blank" rel="noopener">
+                                            <img src="~/images/GARP.webp" alt="Guillermo Rodríguez Piccoli" class="pinimg" asp-append-version="true" />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/e-antonela-prieto-91130681/" target="_blank" rel="noopener">\
+                                            <img src="~/images/EAPH.webp" alt="Elisbeth Antonela Prieto" class="pinimg" asp-append-version="true" />\
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -137,7 +149,7 @@
                                     <li><a asp-area="" asp-controller="Home" asp-action="Portafolio">@Localizer["Portfolio"]</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Partners">@Localizer["Partners"]</a></li>
                                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">@Localizer["Contact"]</a></li>
-</ul>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -148,7 +160,7 @@
                 <div class="gtco-container">
                     <div class="row" style="margin-top:3em;">
                         <div class="col-md-12 mt-text text-center" data-aos="fade-up">
-                            <img src="~/images/epic_lighter.svg" alt="epic solutions logo" style="width:200px;" asp-append-version="true"/>
+                            <img src="~/images/epic_lighter.svg" alt="epic solutions logo" style="width:200px;" asp-append-version="true" />
                             <h1>@Html.Raw(ViewData["titulo"])</h1>
                             <h2>@ViewData["subtitulo"]</h2>
                         </div>
@@ -196,7 +208,7 @@
                         <div class="col-md-12">
                             <p class="float-left">
                                 <small class="block">&copy; 2019 @Localizer["Piccoli Co Ltd. All Rights Reserved."]</small>
-                                <small class="block"><img class="" src="~/images/epic_light_hor.svg" alt="epic solutions logo" style="width:150px" asp-append-version="true"/></small>
+                                <small class="block"><img class="" src="~/images/epic_light_hor.svg" alt="epic solutions logo" style="width:150px" asp-append-version="true" /></small>
                             </p>
                             <p class="float-right">
                                 <ul class="gtco-social-icons float-right">
