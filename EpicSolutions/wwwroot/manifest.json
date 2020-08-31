@@ -1,6 +1,6 @@
 {
-  "name": "Epic Solutions",
-  "short_name": "Epic Solutions",
+  "name": "EpicSolutions",
+  "short_name": "Epic",
   "description": "IT Consulting Services",
   "icons": [
     {
@@ -12,6 +12,12 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/maskable_icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "theme_color": "#ffffff",
