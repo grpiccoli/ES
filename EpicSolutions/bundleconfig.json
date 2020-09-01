@@ -5,6 +5,10 @@
   },
   {
     "outputFileName": "wwwroot/css/style.min.css",
-    "inputFiles": [ "wwwroot/css/style.css" ]
+    "inputFiles": [ "styles/style.css" ]
+  },
+  {
+    "outputFileName": "wwwroot/js/modernizr-custom.min.js",
+    "inputFiles": [ "wwwroot/js/modernizr-custom.js" ]
   }
 ]

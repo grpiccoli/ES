@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "defaultProvider": "unpkg",
+  "defaultProvider": "jsdelivr",
   "libraries": [
     {
       "library": "@fortawesome/fontawesome-free@5.14.0",
-      "destination": "wwwroot/lib/@fortawesome/fontawesome-free",
+      "destination": "wwwroot/lib/fortawesome/fontawesome-free",
       "files": [
         "css/all.min.css",
         "webfonts/fa-solid-900.woff2",
