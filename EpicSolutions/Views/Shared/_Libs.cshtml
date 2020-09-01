@@ -38,16 +38,19 @@
         {
             foreach (var file in l.Files)
             {
-                var url = "unpkg.com";
-                switch (l.Provider)
+                var url = string.Empty;
+                var provider = l.Provider ?? "jsdelivr";
+                switch (provider)
                 {
                     case "cdnjs":
                         l.Library = l.Library.Replace("@", "/");
                         url = "cdnjs.cloudflare.com/ajax/libs";
                         break;
-                    case "":
-                    default:
-                        l.Provider = "unpkg";
+                    case "unpkg":
+                        url = "unpkg.com";
+                        break;
+                    case "jsdelivr":
+                        url = "cdn.jsdelivr.net/npm";
                         break;
                 }
                 var f = $"{l.Destination}/{file}";
