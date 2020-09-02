@@ -5,7 +5,7 @@
     <meta http-equiv="MSThemeCompatible" content="Yes" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no" />
     <meta name=description content="@Localizer["IT Consulting Services - Epic Solutions"].Value" />
     <title>@ViewData["Title"] - EpicSolutions</title>
     <meta name="author" content="Guillermo Antonio Rodríguez Piccoli and Elisbeth Antonela Prieto Heredia" />
@@ -37,13 +37,12 @@
     SiteUsername = "@anelis_1016"
 })
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46146363-7"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-46146363-7');
+        (function (e, t, n, i, s, a, c) { e[n] = e[n] || function () { (e[n].q = e[n].q || []).push(arguments) }
+            ; a = t.createElement(i); c = t.getElementsByTagName(i)[0]; a.async = true; a.src = s; c.parentNode.insertBefore(a, c)
+        })(window, document, "galite", "script", "https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+        galite('create', 'UA-46146363-7', 'auto');
+        galite('send', 'pageview');
     </script>
     <partial name="_Favicons" />
 
@@ -96,7 +95,10 @@
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/@Localizer["en_GB"]/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+            $('[data-testid="bubble_iframe"]').attr('title', 'bubble_iframe');
+            $('[data-testid="unread_iframe"]').attr('title', 'unread_iframe');
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <!-- Your customer chat code -->
     <div class="fb-customerchat"
@@ -125,31 +127,29 @@
                             <div class="col-xs-6 col-md-6 social-icons">
                                 <ul class="gtco-social-top">
                                     <li>
-                                        <a href="https://www.facebook.com/epicsolutions.cl/" target="_blank" rel="noopener">
-                                            <i class="fab fa-facebook-square"></i><span class="d-none">facebook</span>
+                                        <a href="https://www.facebook.com/epicsolutions.cl/" aria-label="facebook" target="_blank" rel="noopener">
+                                            <i class="fab fa-facebook-square"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/company/epicsolutionscl/" target="_blank" rel="noopener">
-                                            <i class="fab fa-linkedin-in"></i><span class="d-none">linkedin</span>
+                                        <a href="https://www.linkedin.com/company/epicsolutionscl/" aria-label="linkedin" target="_blank" rel="noopener">
+                                            <i class="fab fa-linkedin-in"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/guillermo-rodriguez-piccoli/" target="_blank" rel="noopener">
+                                        <a href="https://www.linkedin.com/in/guillermo-rodriguez-piccoli/" aria-label="Guillermo LinkedIn" target="_blank" rel="noopener">
                                             <picture>
                                                 <source srcset="~/images/GARP.webp" type="image/webp" asp-append-version="true" />
                                                 <img src="~/images/GARP.jpg" alt="Guillermo Rodríguez Piccoli" class="pinimg" asp-append-version="true" />
                                             </picture>
-                                            <span class="d-none">Guillermo LinkedIn</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/e-antonela-prieto-91130681/" target="_blank" rel="noopener">
+                                        <a href="https://www.linkedin.com/in/e-antonela-prieto-91130681/" aria-label="Elisbeth Antonela LinkedIn" target="_blank" rel="noopener">
                                             <picture>
                                                 <source srcset="~/images/EAPH.webp" type="image/webp" asp-append-version="true" />
                                                 <img src="~/images/EAPH.jpg" alt="Elisbeth Antonela Prieto" class="pinimg" asp-append-version="true" />
                                             </picture>
-                                            <span class="d-none">Elisbeth Antonela LinkedIn</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -231,33 +231,29 @@
                             <p class="float-right">
                                 <ul class="gtco-social-icons float-right">
                                     <li>
-                                        <a href="https://www.facebook.com/epicsolutions.cl/" target="_blank" rel="noopener">
+                                        <a href="https://www.facebook.com/epicsolutions.cl/" aria-label="facebook" target="_blank" rel="noopener">
                                             <i class="fab fa-facebook-square"></i>
-                                            <span class="d-none">facebook</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/company/epicsolutionscl/" target="_blank" rel="noopener">
+                                        <a href="https://www.linkedin.com/company/epicsolutionscl/" aria-label="LinkedIn" target="_blank" rel="noopener">
                                             <i class="fab fa-linkedin-in"></i>
-                                            <span class="d-none">LinkedIn</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/guillermo-rodriguez-piccoli/" target="_blank" rel="noopener">
+                                        <a href="https://www.linkedin.com/in/guillermo-rodriguez-piccoli/" aria-label="Guillermo LinkedIn" target="_blank" rel="noopener">
                                             <picture>
                                                 <source srcset="~/images/GARP.webp" type="image/webp" asp-append-version="true" />
                                                 <img src="~/images/GARP.jpg" alt="Guillermo Rodríguez Piccoli" class="pinimg" asp-append-version="true" />
                                             </picture>
-                                            <span class="d-none">Guillermo LinkedIn</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/in/e-antonela-prieto-91130681/" target="_blank" rel="noopener">
+                                        <a href="https://www.linkedin.com/in/e-antonela-prieto-91130681/" aria-label="Elisbeth Antonela LinkedIn" target="_blank" rel="noopener">
                                             <picture>
                                                 <source srcset="~/images/EAPH.webp" type="image/webp" asp-append-version="true" />
                                                 <img src="~/images/EAPH.jpg" alt="Elisbeth Antonela Prieto" class="pinimg" asp-append-version="true" />
                                             </picture>
-                                            <span class="d-none">Elisbeth Antonela LinkedIn</span>
                                         </a>
                                     </li>
                                 </ul>

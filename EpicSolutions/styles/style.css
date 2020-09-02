@@ -583,10 +583,10 @@ form label {
   background-image: url("/images/apis2.589.webp"); }
 
 .webp #desk2 {
-  background-image: url("/images/desk2.webp"); }
+  background-image: url("/images/desk2.min.webp"); }
 
 .no-webp #desk2 {
-  background-image: url("/images/desk2.jpg"); }
+  background-image: url("/images/desk2.min.jpg"); }
 
 .no-webp #apis2589 {
   background-image: url("/images/apis2.589.jpg"); }
