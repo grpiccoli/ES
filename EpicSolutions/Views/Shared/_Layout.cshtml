@@ -95,8 +95,9 @@
             js = d.createElement(s); js.id = id;
             js.src = 'https://connect.facebook.net/@Localizer["en_GB"]/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
-            document.querySelector('[data-testid="bubble_iframe"]').setAttribute('title', 'bubble iframe');
-            document.querySelector('[data-testid="unread_iframe"]').setAttribute('title', 'unread iframe');
+            console.log(fjs, js);
+        //document.querySelector('[data-testid="bubble_iframe"]').setAttribute('title', 'bubble iframe');
+        //document.querySelector('[data-testid="unread_iframe"]').setAttribute('title', 'unread iframe');
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
@@ -267,7 +268,6 @@
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="fas fa-arrow-up"></i></a>
     </div>
-
     @this.WriteBlocks("TOPScripts")
     @this.WriteBlocks("Scripts")
     @RenderSection("Scripts", required: false)
