@@ -52,6 +52,8 @@
                     case "jsdelivr":
                         url = "cdn.jsdelivr.net/npm";
                         break;
+                    default:
+                        break;
                 }
                 var f = $"{l.Destination}/{file}";
                 var href = $"{Context.Request.Scheme}://{url}/{l.Library}/{file}";
