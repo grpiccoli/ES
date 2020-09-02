@@ -18,7 +18,7 @@
                 switch (ext)
                 {
                     case ".css":
-                        this.Block(@<link href="@file" rel="stylesheet" asp-append-version="true" />, style);
+                        this.Block(@<link href="@file" rel="stylesheet" asp-append-version="true"/>, style);
                         break;
                     case ".js":
                         this.Block(@<script src="@file" asp-append-version="true"></script>, script);
