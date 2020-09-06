@@ -75,7 +75,7 @@ namespace EpicSolutions.Services
     {
         public static IApplicationBuilder UseSitemapMiddleware(this IApplicationBuilder app)
         {
-            return app.UseMiddleware<SitemapMiddleware>(new[] { new Uri("https://www.bibliomit.cl") });
+            return app.UseMiddleware<SitemapMiddleware>(new[] { new Uri("https://www.epicsolutions.cl") });
         }
     }
 }
