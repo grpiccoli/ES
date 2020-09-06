@@ -100,6 +100,7 @@ namespace EpicSolutions
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+            app.UseSitemapMiddleware();
             app.UseCors();
             //app.UseCors(_corsOrigins);
             //app.Use(async (ctx, next) =>
