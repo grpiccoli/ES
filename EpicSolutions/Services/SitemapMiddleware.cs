@@ -42,9 +42,11 @@ namespace EpicSolutions.Services
                     {
                         var test1 = method.ReturnType.Name == "ActionResult"
                             || method.ReturnType.Name == "IActionResult" || method.ReturnType.Name == "Task`1";
-                        var test2 = method.CustomAttributes.Any(c => c.AttributeType == typeof(AllowAnonymousAttribute));
+                        //only for websites with intranet
+                        //var test2 = method.CustomAttributes.Any(c => c.AttributeType == typeof(AllowAnonymousAttribute));
 
-                        if(test1 && test2)
+                        //if(test1 && test2)
+                        if(test1)
                         {
                             cnt++;
                             sitemapContent += "<url>";
