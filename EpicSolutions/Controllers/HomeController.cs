@@ -3,6 +3,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EpicSolutions.Models;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using System;
+using System.Reflection;
+using System.Linq;
+using System.Globalization;
+using System.IO;
+using System.Text;
 
 namespace EpicSolutions.Controllers
 {

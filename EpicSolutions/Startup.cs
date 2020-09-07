@@ -56,7 +56,7 @@ namespace EpicSolutions
 
             services.AddProgressiveWebApp(new PwaOptions { EnableCspNonce = true });
 
-            services.AddCors();
+            //services.AddCors();
 
             //services.AddCors(options => 
             //    options.AddPolicy(_corsOrigins,
@@ -72,8 +72,8 @@ namespace EpicSolutions
                 //options.ExcludedHosts.Add("https://www.facebook.com");
             });
 
-            services.AddHttpsRedirection(options =>
-                options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect);
+            //services.AddHttpsRedirection(options =>
+            //    options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect);
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
@@ -100,8 +100,7 @@ namespace EpicSolutions
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-            app.UseSitemapMiddleware();
-            app.UseCors();
+            //app.UseCors();
             //app.UseCors(_corsOrigins);
             //app.Use(async (ctx, next) =>
             //{
@@ -116,7 +115,7 @@ namespace EpicSolutions
             var supportedCultures = di.GetDirectories().Where(x => x.Name != "root").Select(x => new CultureInfo(x.Name)).ToList();
             app.UseRequestLocalization(app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value);
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             FileExtensionContentTypeProvider provider = new FileExtensionContentTypeProvider();
             provider.Mappings[".webmanifest"] = "application/manifest+json";
             app.UseStaticFiles(new StaticFileOptions()

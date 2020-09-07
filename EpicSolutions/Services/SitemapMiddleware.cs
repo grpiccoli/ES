@@ -24,7 +24,7 @@ namespace EpicSolutions.Services
 
         public async Task Invoke(HttpContext context)
         {
-            if (context != null && context.Request.Path.Value.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase))
+            if (context != null && context.Request.Path.Value.ToUpperInvariant().Equals("/SITEMAP.XML", StringComparison.Ordinal))
             {
                 var stream = context.Response.Body;
                 context.Response.StatusCode = 200;
