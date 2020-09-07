@@ -5,6 +5,7 @@
   "repository": {},
   "license": "MIT",
   "devDependencies": {
-    "cldr-data-downloader": "0.3.5"
+    "cldr-data-downloader": "0.3.5",
+    "minimist": "1.2.5"
   }
 }
