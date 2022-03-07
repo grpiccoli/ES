@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace EpicSolutions.Models.VM
+﻿namespace BiblioMit.Models.VM
 {
     public class LibManLibrary
     {
-        public string Library { get; set; }
-        public string Destination { get; set; }
-        public List<string> Files { get; } = new List<string>();
-        public string Provider { get; set; }
+        public string Library { get; set; } = string.Empty;
+        public string Destination { get; set; } = string.Empty;
+        public List<string> Files { get; set; } = new List<string>();
+        public string? Provider { get; set; }
     }
 }

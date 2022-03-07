@@ -1,0 +1,60 @@
+﻿@model (string, List<string>, bool)
+
+@using BiblioMit.Extensions
+@using BiblioMit.Services
+@using Microsoft.AspNetCore.Html
+
+@{
+    if (Model.Item3)
+    {
+        string? pageName = ViewContext.RouteData.Values.ContainsKey("action") ?
+        ViewContext.RouteData.Values["controller"]?.ToString()?.Replace("_", "")
+        + ViewContext.RouteData.Values["action"]?.ToString()?.Replace("_", "") :
+        ViewContext.RouteData.Values.ContainsKey("page") ?
+        ViewContext.RouteData.Values["page"]?.ToString()?.Split("/").Last().Replace("_", "") :
+        null;
+        if(pageName != null)
+            Model.Item2.Add(pageName[..1].ToLowerInvariant() + pageName[1..]);
+    }
+
+    string style = $"{Model.Item1}Styles";
+    string script = $"{Model.Item1}Scripts";
+    foreach (string lib in Model.Item2)
+    {
+        HashSet<SourcesModel> l = Libman.GetLibs(lib);
+        foreach (SourcesModel file in l)
+        {
+            Tuple<HtmlString, bool> test = file.LibType switch
+            {
+                LibType.cssLocal => 
+                Tuple.Create(
+                this.Block(style, @<link href="@file.Href" rel="stylesheet" asp-append-version="true" />),
+                true),
+                LibType.cssRemote => 
+                Tuple.Create(
+                this.Block(style, @<link href="@file.Href" rel="stylesheet" crossorigin="anonymous" integrity="@file.Hash" asp-fallback-href="@file.Fallback"/>),
+                BiblioMit.Models.VM.CSPTag.StyleSrcElem.Add(file.Href)),
+                LibType.jsLocal => 
+                Tuple.Create(
+                this.Block(script, @<script src="@file.Href" asp-append-version="true"></script>),
+                true),
+                LibType.jsRemote => 
+                Tuple.Create(
+                this.Block(script, @<script src="@file.Href" crossorigin="anonymous" integrity="@file.Hash" asp-fallback-src="@file.Fallback" ></script>),
+                BiblioMit.Models.VM.CSPTag.ScriptSrcElem.Add(file.Href)),
+                LibType.fontLocal => 
+                Tuple.Create(
+                this.Block(style, @<link href="@file.Href" rel="preload" as="font" type="font/@file.Extension" asp-append-version="true" />),
+                true),
+                LibType.fontRemote => 
+                Tuple.Create(
+                this.Block(style, @<link href="@file.Href" type="font/@file.Extension" crossorigin="anonymous" />),
+                BiblioMit.Models.VM.CSPTag.FontSrc.Add(file.Href)),
+                _ => 
+                Tuple.Create(
+                this.Block(style, @<link href="@file.Href" rel="preload" as="font" type="font/@file.Extension" crossorigin="anonymous" />),
+                BiblioMit.Models.VM.CSPTag.FontSrc.Add(file.Href))
+            };
+        }
+    }
+}

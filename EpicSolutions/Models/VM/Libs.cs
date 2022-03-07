@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EpicSolutions.Models.VM
+﻿namespace BiblioMit.Models.VM
 {
     public class Libs
     {
-        public string DefaultProvider { get; set; }
-        public List<LibManLibrary> Libraries { get; } = new List<LibManLibrary>();
+        public string? Version { get; set; }
+        public string? DefaultProvider { get; set; }
+        public IEnumerable<LibManLibrary>? Libraries { get; set; }
     }
 }

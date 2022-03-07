@@ -1,5 +1,3 @@
-using System;
-
 namespace EpicSolutions.Models
 {
     public class ErrorViewModel

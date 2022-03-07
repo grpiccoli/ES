@@ -1,14 +1,11 @@
-﻿using Microsoft.AspNetCore.Razor.TagHelpers;
-using System;
-using Microsoft.AspNetCore.Mvc.ViewFeatures;
+﻿using Microsoft.AspNetCore.Mvc.Razor.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Razor.TagHelpers;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Razor.Infrastructure;
-using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Mvc.Routing;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Caching.Memory;
 using Microsoft.AspNetCore.Mvc.TagHelpers;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using Microsoft.Extensions.Caching.Memory;
+using System.Text.Encodings.Web;
 
 namespace EpicSolutions.Extensions
 {
