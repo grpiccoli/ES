@@ -6,6 +6,6 @@
   "license": "MIT",
   "devDependencies": {
     "cldr-data-downloader": "0.3.5",
-    "minimist": "1.2.5"
+    "minimist": "1.2.6"
   }
 }
